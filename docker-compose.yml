@@ -3,7 +3,11 @@ services:
   web:
     image: php:7.2-apache
     ports:
-      - "8081:80"
+      - "80:80"
     volumes:
       - jenkins_home:/var/jenkins_home
       - /var/run/docker.sock:/var/run/docker.sock
+      - /c/Users/dclit/OneDrive/Documents/GitHub/SSDLAB7B/jenkins/scripts/src/src:/var/www/html
+
+volumes:
+  jenkins_home:
