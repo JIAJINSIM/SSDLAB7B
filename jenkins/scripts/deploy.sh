@@ -4,13 +4,13 @@ set -x
 docker-compose down
 
 # Start the service using docker-compose
-docker-compose up -d
+MSYS_NO_PATHCONV=1 docker-compose up -d
 
 # Sleep to allow the container to start
 sleep 5
 
 # List the files in the container to verify
-docker-compose exec web ls -la /var/www/html
+MSYS_NO_PATHCONV=1 docker-compose exec web ls -la /var/www/html
 
 set +x
 
