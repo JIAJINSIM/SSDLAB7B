@@ -3,6 +3,6 @@ services:
   web:
     image: php:7.2-apache
     ports:
-      - "8081:80"
+      - "80:80"
     volumes:
-      - //c/Users/dclit/temp-html:/var/www/html
+      - /c/Users/dclit/temp-html:/var/www/html
